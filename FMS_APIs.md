@@ -5,7 +5,7 @@
 ## 📡 Realtime APIs
 
 <details>
-<summary><b>1.[Not Working] GET /filters/real-item</b></summary>
+<summary><b>1.GET /filters/real-item</b></summary>
 
 **Payload**:
 ```json
@@ -48,10 +48,10 @@
 ```
 </details>
 
----
+----
 
 <details>
-<summary><b>2.[Not Working] PUT /filters/real-item</b></summary>
+<summary><b>2.PUT /filters/real-item</b></summary>
 
 **Payload**:
 ```json
@@ -99,7 +99,7 @@
 ---
 
 <details>
-<summary><b>3.[Not Working] GET /filters/real-item/{filter_id}</b></summary>
+<summary><b>3.GET /filters/real-item/{filter_id}</b></summary>
 
 **Payload**:
 ```
@@ -131,7 +131,7 @@ Getting Error{
 ---
 
 <details>
-<summary><b>4.[Not Working] DELETE /filters/real-item/{filter_id}</b></summary>
+<summary><b>4.DELETE /filters/real-item/{filter_id}</b></summary>
 
 **Payload**:
 ```
@@ -148,7 +148,7 @@ filter_id
 ---
 
 <details>
-<summary><b>5. POST /filters/real-time/preview</b></summary>
+<summary><b>5.✅ POST /filters/real-time/preview</b></summary>
 
 **Payload**:
 ```json
@@ -182,7 +182,7 @@ filter_id
 ---
 
 <details>
-<summary><b>6. OPTIONS /filters/real-time/{entity}</b></summary>
+<summary><b>6.✅ OPTIONS /filters/real-time/{entity}</b></summary>
 
 **Payload**:
 ```
@@ -208,7 +208,7 @@ entity → OPTIONS [products, collections, variants, order, publications, locati
 ## 🕰 Historical APIs
 
 <details>
-<summary><b>1.[Not Working] GET /filters/historical</b></summary>
+<summary><b>1.GET /filters/historical</b></summary>
 
 **Response**:
 ```json
@@ -246,7 +246,7 @@ entity → OPTIONS [products, collections, variants, order, publications, locati
 ---
 
 <details>
-<summary><b>2.[Not Working] PUT /filters/historical</b></summary>
+<summary><b>2.PUT /filters/historical</b></summary>
 
 **Payload**:
 ```json
@@ -313,7 +313,7 @@ entity → OPTIONS [products, collections, variants, order, publications, locati
 ---
 
 <details>
-<summary><b>3.[Not Working] GET /filters/historical/{filter_id}</b></summary>
+<summary><b>3.GET /filters/historical/{filter_id}</b></summary>
 
 **Payload**:
 ```json
@@ -354,7 +354,7 @@ filter_id
 --- 
 
 <details>
-<summary><b>4.[Not Working] DELETE /filters/historical/{filter_id}</b></summary>
+<summary><b>4.DELETE /filters/historical/{filter_id}</b></summary>
 
 **Payload**:
 ```json
@@ -370,7 +370,7 @@ filter_id
 ---
 
 <details>
-<summary><b>5. POST /filters/historical/preview</b></summary>
+<summary><b>5.✅ POST /filters/historical/preview</b></summary>
 
 **Payload**:
 ```json
@@ -411,7 +411,7 @@ filter_id
 ---
 
 <details>
-<summary><b>6. OPTIONS /filters/historical/{entity}</b></summary>
+<summary><b>6.✅ OPTIONS /filters/historical/{entity}</b></summary>
 
 **Payload**:
 ```
@@ -452,7 +452,7 @@ entity → OPTIONS [collections, inventory_levels, locations, orders, productVar
 ---
 
 <details>
-<summary><b>7.[Not Working] GET /filters/tasks</b></summary>
+<summary><b>7.GET /filters/tasks</b></summary>
 
 **Response**: 
 <!-- Get all the tasks -->
@@ -486,7 +486,7 @@ entity → OPTIONS [collections, inventory_levels, locations, orders, productVar
 ---
 
 <details>
-<summary><b>8.[Not Working] GET /filters/tasks/{task_id}</b></summary> 
+<summary><b>8.GET /filters/tasks/{task_id}</b></summary> 
 
 **Payload**:
 ```
@@ -521,7 +521,7 @@ task_id
 ---
 
 <details>
-<summary><b>9.[Not Working] PUT /filters/tasks/{task_id}</b></summary> 
+<summary><b>9.PUT /filters/tasks/{task_id}</b></summary> 
 <!-- filter_id, store, app is required --> 
 
 **Payload**:
@@ -577,7 +577,7 @@ task_id
 ---
 
 <details>
-<summary><b>10.[Not Working] DELETE /filters/tasks/{task_id}</b></summary> 
+<summary><b>10.DELETE /filters/tasks/{task_id}</b></summary> 
 
 **Payload**:
 ```
