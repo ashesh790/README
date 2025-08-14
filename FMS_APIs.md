@@ -26,14 +26,80 @@
 
 **Response**:
 ```
-Getting Error
+[
+  {
+    "id": "string",
+    "name": "string",
+    "date_created": "2025-08-14T09:49:07.278Z",
+    "store": "adgnosis-test",
+    "app": "cs",
+    "entity": "products",
+    "filter": {
+      "field": "id",
+      "operator": "=",
+      "value": "4606038081636"
+    },
+    "columns": [
+      "id",
+      "title"
+    ]
+  }
+]
 ```
 </details>
 
 ---
 
 <details>
-<summary><b>2.[Not Working] GET /filters/real-item/{filter_id}</b></summary>
+<summary><b>2.[Not Working] PUT /filters/real-item</b></summary>
+
+**Payload**:
+```json
+{
+  "id": "string",
+  "name": "string",
+  "date_created": "2025-08-14T09:48:03.588Z",
+  "store": "adgnosis-test",
+  "app": "cs",
+  "entity": "products",
+  "filter": {
+    "field": "id",
+    "operator": "=",
+    "value": "4606038081636"
+  },
+  "columns": [
+    "id",
+    "title"
+  ]
+}
+```
+
+**Response**:
+```
+{
+  "id": "string",
+  "name": "string",
+  "date_created": "2025-08-14T09:48:03.595Z",
+  "store": "adgnosis-test",
+  "app": "cs",
+  "entity": "products",
+  "filter": {
+    "field": "id",
+    "operator": "=",
+    "value": "4606038081636"
+  },
+  "columns": [
+    "id",
+    "title"
+  ]
+}
+```
+</details>
+
+---
+
+<details>
+<summary><b>3.[Not Working] GET /filters/real-item/{filter_id}</b></summary>
 
 **Payload**:
 ```
@@ -42,14 +108,30 @@ filter_id
 
 **Response**:
 ```
-Getting Error
+Getting Error{
+  "id": "string",
+  "name": "string",
+  "date_created": "2025-08-14T09:50:33.526Z",
+  "store": "adgnosis-test",
+  "app": "cs",
+  "entity": "products",
+  "filter": {
+    "field": "id",
+    "operator": "=",
+    "value": "4606038081636"
+  },
+  "columns": [
+    "id",
+    "title"
+  ]
+}
 ```
 </details>
 
 ---
 
 <details>
-<summary><b>3.[Not Working] DELETE /filters/real-item/{filter_id}</b></summary>
+<summary><b>4.[Not Working] DELETE /filters/real-item/{filter_id}</b></summary>
 
 **Payload**:
 ```
@@ -58,14 +140,15 @@ filter_id
 
 **Response**:
 ```
-Getting Error
+204 Successful Response 
+
 ```
 </details>
 
 ---
 
 <details>
-<summary><b>4. POST /filters/real-time/preview</b></summary>
+<summary><b>5. POST /filters/real-time/preview</b></summary>
 
 **Payload**:
 ```json
@@ -99,7 +182,7 @@ Getting Error
 ---
 
 <details>
-<summary><b>5. OPTIONS /filters/real-time/{entity}</b></summary>
+<summary><b>6. OPTIONS /filters/real-time/{entity}</b></summary>
 
 **Payload**:
 ```
