@@ -332,7 +332,7 @@ task_id
 ---
 
 <details>
-<summary><b>5.[Not Working] DELETE /filters/tasks/{task_id}</b></summary> 
+<summary><b>6.[Not Working] DELETE /filters/tasks/{task_id}</b></summary> 
 
 **Payload**:
 ```
