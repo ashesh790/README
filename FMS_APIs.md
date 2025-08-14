@@ -204,6 +204,8 @@ entity → OPTIONS [collections, inventory_levels, locations, orders, productVar
 ```
 </details> 
 
+---
+
 <details>
 <summary><b>3.[Not Working] GET /filters/tasks</b></summary>
 
@@ -235,6 +237,8 @@ entity → OPTIONS [collections, inventory_levels, locations, orders, productVar
 ]
 ```
 </details>
+
+---
 
 <details>
 <summary><b>4.[Not Working] GET /filters/tasks/{task_id}</b></summary> 
@@ -268,6 +272,8 @@ task_id
 }
 ```
 </details>
+
+---
 
 <details>
 <summary><b>5.[Not Working] PUT /filters/tasks/{task_id}</b></summary> 
@@ -323,15 +329,37 @@ task_id
 ```
 </details>
 
+---
+
 <details>
 <summary><b>5.[Not Working] DELETE /filters/tasks/{task_id}</b></summary> 
 
 **Payload**:
 ```
-task_id: cfdc36d7-4895-4e3c-bfb2-e7833f153e72 
+task_id: cfdc36d7-4895-4e3c-bfb2-e7833f153e72
 ```
 **Response**: 
 ```
-204 STATUS CODE 
+{
+  "id": "string",
+  "filter_id": "string",
+  "store": "string",
+  "app": "string",
+  "filter_type": "parquet",
+  "execution_status": "IN_PROGRESS",
+  "failure_reason": "string",
+  "last_executed_at": "2025-08-14T09:08:32.816Z",
+  "logs": [
+    {
+      "matched_entity_ids": [
+        "string"
+      ],
+      "duration": "string"
+    }
+  ],
+  "schedule_expression": "rate(5 minutes)",
+  "schedule_enabled": false,
+  "sns_topic": "string"
+}
 ```
 </details>
