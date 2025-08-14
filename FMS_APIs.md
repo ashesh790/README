@@ -125,7 +125,169 @@ entity → OPTIONS [products, collections, variants, order, publications, locati
 ## 🕰 Historical APIs
 
 <details>
-<summary><b>1. POST /filters/historical/preview</b></summary>
+<summary><b>1.[Not Working] GET /filters/historical</b></summary>
+
+**Response**:
+```json
+[
+  {
+    "id": "string",
+    "name": "string",
+    "date_created": "2025-08-14T09:33:46.965Z",
+    "entity": "collections",
+    "store": "string",
+    "filter": {
+      "field": "id",
+      "operator": "=",
+      "value": "4606038081636"
+    },
+    "joins": [
+      {
+        "columns": [
+          "quantity"
+        ],
+        "left_on": "id",
+        "right_on": "product_id",
+        "table": "orders"
+      }
+    ],
+    "columns": [
+      "id",
+      "quantity"
+    ]
+  }
+]
+```
+</details>
+
+---
+
+<details>
+<summary><b>2.[Not Working] PUT /filters/historical</b></summary>
+
+**Payload**:
+```json
+{
+  "id": "string",
+  "name": "string",
+  "date_created": "2025-08-14T09:35:18.261Z",
+  "entity": "collections",
+  "store": "string",
+  "filter": {
+    "field": "id",
+    "operator": "=",
+    "value": "4606038081636"
+  },
+  "joins": [
+    {
+      "columns": [
+        "quantity"
+      ],
+      "left_on": "id",
+      "right_on": "product_id",
+      "table": "orders"
+    }
+  ],
+  "columns": [
+    "id",
+    "quantity"
+  ]
+}
+```
+
+**Response**:
+<!-- Updated changes --> 
+```json
+{
+  "id": "string",
+  "name": "string",
+  "date_created": "2025-08-14T09:35:18.266Z",
+  "entity": "collections",
+  "store": "string",
+  "filter": {
+    "field": "id",
+    "operator": "=",
+    "value": "4606038081636"
+  },
+  "joins": [
+    {
+      "columns": [
+        "quantity"
+      ],
+      "left_on": "id",
+      "right_on": "product_id",
+      "table": "orders"
+    }
+  ],
+  "columns": [
+    "id",
+    "quantity"
+  ]
+}
+```
+</details>
+
+---
+
+<details>
+<summary><b>3.[Not Working] GET /filters/historical/{filter_id}</b></summary>
+
+**Payload**:
+```json
+filter_id
+```
+
+**Response**:
+```json
+{
+  "id": "string",
+  "name": "string",
+  "date_created": "2025-08-14T09:37:10.926Z",
+  "entity": "collections",
+  "store": "string",
+  "filter": {
+    "field": "id",
+    "operator": "=",
+    "value": "4606038081636"
+  },
+  "joins": [
+    {
+      "columns": [
+        "quantity"
+      ],
+      "left_on": "id",
+      "right_on": "product_id",
+      "table": "orders"
+    }
+  ],
+  "columns": [
+    "id",
+    "quantity"
+  ]
+}
+```
+</details>
+
+--- 
+
+<details>
+<summary><b>4.[Not Working] DELETE /filters/historical/{filter_id}</b></summary>
+
+**Payload**:
+```json
+filter_id
+```
+
+**Response**:
+```json
+204 Successful Response 
+```
+</details>
+
+---
+
+<details>
+<summary><b>5. POST /filters/historical/preview</b></summary>
 
 **Payload**:
 ```json
@@ -166,7 +328,7 @@ entity → OPTIONS [products, collections, variants, order, publications, locati
 ---
 
 <details>
-<summary><b>2. OPTIONS /filters/historical/{entity}</b></summary>
+<summary><b>6. OPTIONS /filters/historical/{entity}</b></summary>
 
 **Payload**:
 ```
@@ -207,7 +369,7 @@ entity → OPTIONS [collections, inventory_levels, locations, orders, productVar
 ---
 
 <details>
-<summary><b>3.[Not Working] GET /filters/tasks</b></summary>
+<summary><b>7.[Not Working] GET /filters/tasks</b></summary>
 
 **Response**: 
 <!-- Get all the tasks -->
@@ -241,7 +403,7 @@ entity → OPTIONS [collections, inventory_levels, locations, orders, productVar
 ---
 
 <details>
-<summary><b>4.[Not Working] GET /filters/tasks/{task_id}</b></summary> 
+<summary><b>8.[Not Working] GET /filters/tasks/{task_id}</b></summary> 
 
 **Payload**:
 ```
@@ -276,7 +438,7 @@ task_id
 ---
 
 <details>
-<summary><b>5.[Not Working] PUT /filters/tasks/{task_id}</b></summary> 
+<summary><b>9.[Not Working] PUT /filters/tasks/{task_id}</b></summary> 
 <!-- filter_id, store, app is required --> 
 
 **Payload**:
@@ -332,7 +494,7 @@ task_id
 ---
 
 <details>
-<summary><b>6.[Not Working] DELETE /filters/tasks/{task_id}</b></summary> 
+<summary><b>10.[Not Working] DELETE /filters/tasks/{task_id}</b></summary> 
 
 **Payload**:
 ```
