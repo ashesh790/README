@@ -5,7 +5,67 @@
 ## 📡 Realtime APIs
 
 <details>
-<summary><b>1. POST /filters/real-time/preview</b></summary>
+<summary><b>1. GET /filters/real-item</b></summary>
+
+**Payload**:
+```json
+{
+  "id": "894b62ad-d6e0-4b1a-b24c-e04f66cb6b4e_1",
+  "name": "Updated",
+  "date_created": "2025-08-13T12:31:03.523Z",
+  "store": "hsdevtestfestore",
+  "app": "hs",
+  "entity": "products",
+  "filter": {
+    "field": "title",
+    "operator": "contains",
+    "value": "baby updated"
+  }
+}
+```
+
+**Response**:
+```
+Getting Error
+```
+</details>
+
+---
+
+<details>
+<summary><b>2. GET /filters/real-item/{filter_id}</b></summary>
+
+**Payload**:
+```
+filter_id
+```
+
+**Response**:
+```
+Getting Error
+```
+</details>
+
+---
+
+<details>
+<summary><b>3. DELETE /filters/real-item/{filter_id}</b></summary>
+
+**Payload**:
+```
+filter_id
+```
+
+**Response**:
+```
+Getting Error
+```
+</details>
+
+---
+
+<details>
+<summary><b>4. POST /filters/real-time/preview</b></summary>
 
 **Payload**:
 ```json
@@ -39,7 +99,7 @@
 ---
 
 <details>
-<summary><b>2. OPTIONS /filters/real-time/{entity}</b></summary>
+<summary><b>5. OPTIONS /filters/real-time/{entity}</b></summary>
 
 **Payload**:
 ```
